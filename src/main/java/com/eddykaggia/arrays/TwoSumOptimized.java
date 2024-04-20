@@ -1,8 +1,11 @@
 package com.eddykaggia.arrays;
 
-public class TwoSum {
+import java.util.HashMap;
+import java.util.Map;
+
+public class TwoSumOptimized {
     public static void main(String[] args) {
-       TwoSum twoSum = new TwoSum();
+        TwoSum twoSum = new TwoSum();
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         int[] result = twoSum.twoSum(nums, target);
@@ -15,15 +18,15 @@ public class TwoSum {
         System.out.println(); // Print a newline for better formatting
     }
 
-    public int[] twoSum(int[] nums, int target){
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> complements = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
-                }
+            Integer complementIndex = complements.get(nums[i]);
+            if (complementIndex != null) {
+                return new int[]{i, complementIndex};
             }
+            complements.put(target - nums[i], i);
         }
-        return new int[0];
+        return nums;
     }
 }
