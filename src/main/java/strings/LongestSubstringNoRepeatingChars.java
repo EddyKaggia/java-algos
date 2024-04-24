@@ -1,5 +1,8 @@
 package strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LongestSubstringNoRepeatingChars {
     public static void main(String[] args) {
         String input = "abcabcbb"; // Example input string
@@ -14,7 +17,7 @@ public class LongestSubstringNoRepeatingChars {
                 ("Length of the longest substring without repeating characters: " + result2); // 3
     }
 
-    // Non-optimal solution
+    // NON-OPTIMAL solution
     public static int lengthOfLongestSubstring( String s) {
         int maxLength = 0;
 
@@ -33,9 +36,23 @@ public class LongestSubstringNoRepeatingChars {
         return maxLength;
     }
 
-    // Optimal Solution
+    // OPTIMAL Solution
     public static int lengthOfLongestSubstring2( String s) {
         int maxLength = 0;
+
+        Map<Character, Integer> visitedCharacters= new HashMap<>();
+
+        for (int right = 0, left = 0; right < s.length(); right++) {
+            char currentCharacter = s.charAt(right);
+
+            if (visitedCharacters.containsKey(currentCharacter)
+                    && visitedCharacters.get(currentCharacter) >= left) {
+                left = visitedCharacters.get(currentCharacter) + 1;
+            }
+
+            maxLength = Math.max(maxLength, right - left + 1);
+            visitedCharacters.put(currentCharacter, right);
+        }
 
         return maxLength;
     };
