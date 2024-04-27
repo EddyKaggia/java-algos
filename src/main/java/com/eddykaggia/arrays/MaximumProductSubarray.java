@@ -21,7 +21,7 @@ public class MaximumProductSubarray {
         for (int n: nums) {
             int tmp = max * n;
             max = Math.max(n, Math.max(tmp, min * n));
-            min= Math.min(n, Math.min(tmp, min * n));
+            min = Math.min(n, Math.min(tmp, min * n));
             res = Math.max(res, max);
         }
 
