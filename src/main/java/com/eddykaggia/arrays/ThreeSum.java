@@ -21,8 +21,14 @@ public class ThreeSum {
 
         // Loop through the input array, nums.length - 2 to ensure that we have a triplet
         for (int i = 0; i < nums.length - 2; i++) {
-            if(i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
+            if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {
+                int left = i + 1, right = nums.length - 1, target = -nums[i];
 
+                while (left < right) {
+                    if (nums[left] + nums[right] == target) {
+//                        result.add();
+                    }
+                }
             }
         }
         return result;
