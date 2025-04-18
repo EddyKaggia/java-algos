@@ -3,34 +3,33 @@ package com.eddykaggia.arrays;
 public class ReplaceLast {
 
     public static String replace(String inputStr, String replacementStr) {
-    // Find space
-    char[] inputArr = inputStr.toCharArray();
-    String newStr = "";
-    int i = 0;
-    int indexSpace = -1;
+        // Find space
+        char[] inputArr = inputStr.toCharArray();
+        String newStr = "";
+        int i = 0;
+        int indexOfSpace = -1;
 
-    while (i < inputArr.length) {
-        if(inputArr[i] == ' ') {
-            indexSpace = i;
-            break;
+        while (i < inputArr.length) {
+            if (inputArr[i] == ' ') {
+                indexOfSpace = i;
+                break;
+            }
+            i++;
         }
-        i++;
-    }
 
-    // Copy first part of input string to output string
-    int j = 0;
+        // Add first part of input str to output str
+       int  j = 0;
+        while (j < indexOfSpace) {
+            newStr += inputArr[j];
+            j++;
+        }
 
-    while (j < indexSpace) {
-        newStr += inputArr[j];
-        j++;
-    }
+        // Add space
+        newStr += ' ';
 
-    // Add space to string
-    newStr += ' ';
-    // Add string to end
-    newStr += replacementStr;
-
-    return newStr;
+        // Add replacement str
+        newStr += replacementStr;
+        return newStr;
     }
 
 
