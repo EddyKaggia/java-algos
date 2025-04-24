@@ -4,8 +4,7 @@ public class Prime {
     public static Boolean isPrime(int input) {
         boolean prime = true;
 
-        if (input <= 1) 
-            prime = false;
+        if (input <= 1) prime = false;
 
         for (int i = 2; i < input; i++) {
             if (input % i == 0) {
@@ -14,11 +13,11 @@ public class Prime {
             }
         }
 
-            return prime;
+        return prime;
     }
 
     public static void main(String [] args) {
-        System.out.println(isPrime(5));
+        System.out.println(isPrime(2));
         System.out.println(isPrime(4));
         System.out.println(isPrime(13));
     }
