@@ -1,4 +1,4 @@
-package com.eddykaggia.arrays;
+package com.arrays;
 
 public class Sum {
     public static int sum(int[] inputArr) {

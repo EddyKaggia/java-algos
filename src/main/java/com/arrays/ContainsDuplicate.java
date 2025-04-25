@@ -1,4 +1,4 @@
-package com.eddykaggia.arrays;
+package com.arrays;
 
 import java.util.HashSet;
 import java.util.Set;

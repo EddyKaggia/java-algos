@@ -1,4 +1,4 @@
-package com.eddykaggia.arrays;
+package com.arrays;
 
 public class SearchRotatedArray {
     public static void main(String[] args) {

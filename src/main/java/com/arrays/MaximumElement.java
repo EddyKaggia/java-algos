@@ -1,4 +1,4 @@
-package com.eddykaggia.arrays;
+package com.arrays;
 
 public class MaximumElement {
     public static int maxElem(int[] inputArr) {
