@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class Sum {
     public static int sum(int[] inputArr) {

@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class Equal {
     public static Boolean same(Object[] arr1, Object[] arr2) {

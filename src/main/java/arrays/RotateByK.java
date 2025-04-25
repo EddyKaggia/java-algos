@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class RotateByK {
     int[] rotateArr = {1, 2, 3, 4, 5};

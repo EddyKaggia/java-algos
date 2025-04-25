@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class BubbleSort {
     int[] bubbleArr = {5, 1, 4, 2, 8};

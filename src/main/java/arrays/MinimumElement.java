@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class MinimumElement {
     public static int minElem(int[] inputArr) {

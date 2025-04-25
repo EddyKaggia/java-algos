@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class Frequency {
     int[] freqArr = {1, 2, 2, 3, 3, 3};

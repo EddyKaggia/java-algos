@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class Merge {
     int[] a = {1, 3, 5};

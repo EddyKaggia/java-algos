@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class FindMissing {
     int[] nums = {1, 2, 4, 5};
