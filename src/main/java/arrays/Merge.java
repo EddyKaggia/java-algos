@@ -1,17 +1,25 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class Merge {
-    int[] a = {1, 3, 5};
-int[] b = {2, 4, 6};
-int[] merged = new int[a.length + b.length];
-int i = 0, j = 0, k = 0;
+    public static int[] merge(int[] arr1, int[] arr2) {
+        int[] merged = new int[arr1.length + arr2.length];
 
-while (i < a.length && j < b.length) {
-    merged[k++] = a[i] < b[j] ? a[i++] : b[j++];
-}
-while (i < a.length) merged[k++] = a[i++];
-while (j < b.length) merged[k++] = b[j++];
+        int i = 0, j = 0, k = 0;
 
-System.out.println(Arrays.toString(merged));
+        while (i < arr1.length && j < arr2.length) {
+            merged[k++] = arr1[i] < arr2[j] ? arr1[i++] : arr2[j++];
+        }
+
+        while (i < arr1.length) merged[k++] = arr1[i++];
+        while (j < arr2.length) merged[k++] = arr2[j++];
+
+        return merged;
+    }
+
+    public static void main (String [] args) {
+        System.out.println(Arrays.toString(merge(new int[]{1, 3, 5, 23, 9}, new int[]{2, 4, 6, 11, 15, 17})));
+    }
 
 }
