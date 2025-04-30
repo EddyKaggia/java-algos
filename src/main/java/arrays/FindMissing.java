@@ -1,11 +1,23 @@
 package arrays;
 
 public class FindMissing {
-    int[] nums = {1, 2, 4, 5};
-int n = 5;
-int expectedSum = n * (n + 1) / 2;
-int actualSum = 0;
-for (int num : nums) actualSum += num;
-System.out.println("Missing number: " + (expectedSum - actualSum));
+    public static int missing(int[] inputArr) {
+        int n = inputArr.length;
 
+        int actualSum = 0;
+
+        int expectedSum = n * (n + 1)/2;
+
+        for (int num: inputArr) {
+            actualSum += num;
+        }
+
+        return expectedSum - actualSum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(missing(new int[]{3,0,1}));
+        System.out.println(missing(new int[]{0,1}));
+        System.out.println(missing(new int[]{9,6,4,2,3,5,7,0,1}));
+    }
 }
