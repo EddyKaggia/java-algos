@@ -21,7 +21,7 @@ public class Book {
 
     public static void main(String [] args) {
         System.out.println(create("The Fifth Season", "N. K. Jemisin"));
-        System.out.println(create("The Sorcere of The Wildeeps", "K. Ashante Williams"));
+        System.out.println(create("A Sorcerer of The Wildeeps", "K. Ashante Williams"));
         System.out.println(create("A Master of Djinn", "P. Djelli Clark"));
     }
 }
