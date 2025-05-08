@@ -88,7 +88,7 @@ public class SerializeDeserialize {
 
     // Example usage
     public static void main(String[] args) {
-        Codec codec = new Codec();
+        SerializeDeserialize codec = new SerializeDeserialize();
 
         // Build sample tree: [1,2,3,null,null,4,5]
         TreeNode root = new TreeNode(1);
