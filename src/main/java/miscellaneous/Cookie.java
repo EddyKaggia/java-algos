@@ -1,6 +1,6 @@
-package classes;
+package miscellaneous;
 
-
+// Classes are templates
 public class Cookie {
     //Class variable
     private String color;
@@ -12,9 +12,12 @@ public class Cookie {
         this.color = color;
     }
 
-    public static void main(String[] args) {
-        Cookie cookieOne = new Cookie("green");
-        Cookie cookieTwo = new Cookie("blue");
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
 
