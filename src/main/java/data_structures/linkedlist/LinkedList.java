@@ -30,6 +30,21 @@ public class LinkedList {
         }
     }
 
+    // Get head
+    public void getHead() {
+        System.out.println("Head: " + head.value);
+    }
+
+    // Get tail
+    public void getTail() {
+        System.out.println("Tail: " + tail.value);
+    }
+
+    // Get length
+    public void getLength() {
+        System.out.println("Length: " + length);
+    }
+
     // Add new node to end
     public void append(int value) {
 
