@@ -5,7 +5,7 @@ public class LinkedList {
     private Node tail;
     private int length;
 
-    class Node {
+    static class Node {
         int value;
         Node next;
 
@@ -47,7 +47,37 @@ public class LinkedList {
 
     // Add new node to end
     public void append(int value) {
+        Node newNode = new Node(value);
 
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+         length++;
+    }
+
+    // Remove last node
+    public Node removeLast() {
+        if (length == 0) return null;
+
+        Node temp = head;
+        Node pre = head;
+
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
     }
 
     // Add new node at beginning
