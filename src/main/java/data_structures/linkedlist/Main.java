@@ -4,13 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList myLinkedList = new LinkedList(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-        myLinkedList.append(5);
+        DoublyLinkedList myDLL = new DoublyLinkedList(1);
 
-        myLinkedList.printList();
-        myLinkedList.reverse();
-        myLinkedList.printList();
+     myDLL.append(2);
+        myDLL.printList();
     }
 }
